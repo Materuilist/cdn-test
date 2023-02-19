@@ -9,14 +9,14 @@ import App from "./App";
 //   </React.StrictMode>
 // );
 
-window.renderSideApp = function (containerId) {
+window.renderSideApp = function (containerId, userName) {
   const sideRoot = ReactDOM.createRoot(document.getElementById(containerId));
 
   sideRoot.render(
     <React.StrictMode>
-      <App />
+      <App name={userName} />
     </React.StrictMode>
   );
 };
 
-// window.renderSideApp("root");
+window.renderSideApp("root", 'boba');
